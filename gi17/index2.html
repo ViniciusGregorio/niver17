@@ -1,0 +1,111 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa de Aniversário</title>
+    <style>
+        body {
+ background: url('https://i.pinimg.com/236x/5e/7c/99/5e7c99a48b2fa099df6433774de33c8d.jpg') no-repeat center center fixed; /* Imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            color: #333;
+            padding: 50px;
+        }
+        #hiddenContent, #parabens {
+            display: none;
+        }
+        img {
+            max-width: 200px;
+            margin: 10px;
+        }
+        button {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049; /* Verde mais escuro */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Surpresa de Aniversário!</h1>
+    <p id="message">Siga as pistas para descobrir o código.</p>
+    <button id="proceedButton">Prosseguir</button>
+
+    <div id="hiddenContent">
+        <p>Vá para a janela do último quarto feito nesta casa.</p>
+        <input type="text" id="codeInput" placeholder="Insira o código aqui">
+        <button id="submitCode">Enviar Código</button>
+    </div>
+
+   <div id="parabens">
+        <h2>Parabéns!</h2>
+        <img src="img_gi1.jpg" alt="Representação 1">
+        <img src="img_gi2.jpg" alt="Representação 2">
+        <img src="img_gi3.jpg" alt="Representação 3">
+        <img src="img_gi4.jpg" alt="Representação 4">
+        <img src="img_gi7.jpg" alt="Sua Foto">
+        <br>
+        <button id="finalButton">Clique aqui</button>
+    </div>	
+
+    <script>
+        document.getElementById('proceedButton').onclick = function() {
+            // Enviar e-mail (utilize um serviço como EmailJS)
+            fetch('https://api.emailjs.com/api/v1.0/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    service_id: 'service_3ippan7',
+                    template_id: 'template_zhln4ul',
+                    user_id: 'voatvQCnAcxuqrz7E',
+                    template_params: {
+                        message: 'A aniversariante acessou o site!'
+                    }
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log('E-mail enviado!');
+                } else {
+                    console.error('Erro ao enviar o e-mail.');
+                }
+            });
+
+            document.getElementById('message').style.display = 'none';
+            document.getElementById('proceedButton').style.display = 'none';
+            document.getElementById('hiddenContent').style.display = 'block';
+        };
+
+        document.getElementById('submitCode').onclick = function() {
+            const code = document.getElementById('codeInput').value;
+            if (code === 'vivaos17') {
+                document.getElementById('hiddenContent').style.display = 'none';
+                document.getElementById('parabens').style.display = 'block';
+            } else {
+                alert('Código incorreto! Tente novamente.');
+            }
+        };
+
+        document.getElementById('finalButton').onclick = function() {
+            alert('BOAA Feliz aniversário minha irmã!!Esse negócio deu trabalho kkkk Agora Vá para a varanda!');
+        };
+    </script>
+
+</body>
+</html>
