@@ -62,14 +62,14 @@ header p {
     font-weight: bold;
 }
 
-.hidden {
+.hidden !important {
     display: none;
 }
 
 /* Vídeo */
 #videoContainer {
     margin-top: 30px;
-    display: none;
+    display: flex;
     justify-content: center;
 }
 
