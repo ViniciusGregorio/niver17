@@ -1,0 +1,93 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilizando o header */
+header {
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 50px 0;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Surpresa */
+.surprise {
+    margin-top: 50px;
+}
+
+#surpriseButton {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #ff007f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#surpriseButton:hover {
+    background-color: #ff33cc;
+}
+
+#surpriseText {
+    margin-top: 20px;
+    font-size: 2em;
+    color: #ff007f;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Galeria de fotos */
+.photo-gallery {
+    margin-top: 50px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Estilizando o footer */
+footer {
+    margin-top: 50px;
+    font-size: 1.2em;
+    color: #555;
+}
