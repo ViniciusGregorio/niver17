@@ -62,7 +62,7 @@ header p {
     font-weight: bold;
 }
 
-.hidden!important {
+.hidden {
     display: none;
 }
 
