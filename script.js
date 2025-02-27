@@ -4,5 +4,5 @@ document.getElementById('surpriseButton').addEventListener('click', function() {
 
     // Mostra o vídeo do YouTube
     const videoContainer = document.getElementById('videoContainer');
-   
+    videoContainer.style.display = 'flex'; // Altera o display para 'flex' para mostrar o vídeo
 });
