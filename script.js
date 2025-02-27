@@ -3,5 +3,6 @@ document.getElementById('surpriseButton').addEventListener('click', function() {
     document.getElementById('surpriseText').classList.remove('hidden');
 
     // Mostra o vídeo do YouTube
-    document.getElementById('videoContainer').classList.remove('hidden');
+    const videoContainer = document.getElementById('videoContainer');
+    videoContainer.style.display = 'block'; // Garante que o vídeo seja exibido
 });
